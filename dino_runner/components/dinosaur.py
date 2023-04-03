@@ -50,6 +50,8 @@ class Dinosaur(Sprite):
         self.rect.x = self.POS_X
         self.rect.y = self.POS_Y + 35
         self.step += 1
+        self.position()
+
 
     def run(self):
         self.image = RUNNING[self.step // 5]
@@ -57,6 +59,8 @@ class Dinosaur(Sprite):
         self.rect.x = self.POS_X 
         self.rect.y = self.POS_Y
         self.step += 1
+        self.position()
+
 
     def jump(self):
         self.image = JUMPING
@@ -67,6 +71,8 @@ class Dinosaur(Sprite):
             self.action = DINO_RUNNING
             self.rect.y = self.POS_Y
             self.jump_velocity = self.JUMP_VELOCITY
+            self.position()
+
 
     def draw(self, screen: Surface):
         screen.blit(self.image, (self.rect.x, self.rect.y))
