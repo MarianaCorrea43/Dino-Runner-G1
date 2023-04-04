@@ -5,8 +5,8 @@ from dino_runner.utils.constants import BIRD
 
 class Bird(Obstacle):
     def __init__(self):
-        random_img = random.randint(0,1)
-        super().__init__(BIRD[random_img], pos_y=200)
+        random_img = random.randint(0, 1)
+        super().__init__(BIRD[random_img], pos_y= random.randint(200,300))
         self.step = 0
 
     def update(self, game_speed, obstacles):
