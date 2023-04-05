@@ -13,7 +13,7 @@ class Score(Sprite):
             game.game_speed += 2
 
     def draw(self, screen):
-        font = pygame.font.Font("freesansbold.ttf", 30)
+        font = pygame.font.Font("freesansbold.ttf", 22)
         text = font.render(f"Score: {self.score}", True,(0,0,0))
         text_rect  = text.get_rect()
         text_rect.center = (1000, 50)
