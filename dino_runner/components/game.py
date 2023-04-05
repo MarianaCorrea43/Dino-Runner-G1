@@ -84,7 +84,7 @@ class Game:
         print("I am dead")
         print(self.death_count)
         #if self.score.score > self.high_score:
-            #self.hight_score = self.high_score
+            #self.hight_score = self.score.score
         
     def show_menu(self):
         half_screen_height = SCREEN_HEIGHT //2
