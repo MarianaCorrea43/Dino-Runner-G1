@@ -13,15 +13,16 @@ class ObstacleManager:
     def __init__(self):
         self.obstacles: list[Obstacle] = []
 
-    def update(self, game):
+    def update(self, game_speed, player, on_death):
         if not self.obstacles:
             self.obstacles.append(self.bird2())
 
         for obstacle in self.obstacles:
-            obstacle.update(game.game_speed, self.obstacles)
-            if obstacle.rect.colliderect(game.player.rect):
-                pygame.time.delay(500)
-                game.playing = False
+            obstacle.update(game_speed, self.obstacles)
+            if obstacle.rect.colliderect(player.rect):
+                """pygame.time.delay(500)
+                game.playing = False"""
+                on_death()
 
     def bird2(self):
         bird21 = [LargeCactus(), Bird(), SmallCactus()]
@@ -31,6 +32,10 @@ class ObstacleManager:
     def draw(self, screen):
         for obstacle in self.obstacles:
             obstacle.draw(screen)
+
+    def reset(self):
+        self.obstacles = []
+
 
 
 

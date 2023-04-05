@@ -68,5 +68,5 @@ HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
-
+START = pygame.image.load(os.path.join(IMG_DIR, 'dino/DinoStart.png'))
 DEFAULT_TYPE = "default"
